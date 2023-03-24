@@ -10,9 +10,9 @@
 // ["Russia", "Denmark", "Kazan"] -> []
 
 
-void PrintArray(string[] words, string myText)
+void PrintArray(string[] words, string text)
 {
-    Console.Write(myText);
+    Console.Write(text);
     for (int i = 0; i < words.Length; i++)
     {
         if (i == 0) Console.Write("[");
@@ -57,9 +57,9 @@ string[] ArrayWordsLessThree(string[] text)
 }
 
 string myText = "Hello people age 40, be happy in 2023 :-)";
-string[] words = myText.Split(new char[] { ' ' });
-PrintArray(words, "Массив текста: ");
-string[] findArray = ArrayWordsLessThree(words);
+string[] wordsArray = myText.Split(new char[] { ' ' });
+PrintArray(wordsArray, "Массив текста: ");
+string[] findArray = ArrayWordsLessThree(wordsArray);
 PrintArray(findArray, " Массив из строк, длина которых меньше либо равна 3 символам: ");
 
 
