@@ -15,10 +15,10 @@ void PrintArray(string[] words, string text)
     Console.Write(text);
     for (int i = 0; i < words.Length; i++)
     {
-        if (i == 0) Console.Write("[");
+        if (i == 0) Console.Write("[\"");
         Console.Write(words[i]);
-        if (i != words.Length - 1) Console.Write(", ");
-        if (i == words.Length - 1) Console.Write("]");
+        if (i != words.Length - 1) Console.Write("\", \"");
+        if (i == words.Length - 1) Console.Write("\"]");
     }
     Console.WriteLine();
 }
@@ -60,6 +60,6 @@ string myText = "Hello people age 40, be happy in 2023 :-)";
 string[] wordsArray = myText.Split(new char[] { ' ' });
 PrintArray(wordsArray, "Массив текста: ");
 string[] findArray = ArrayWordsLessThree(wordsArray);
-PrintArray(findArray, " Массив из строк, длина которых меньше либо равна 3 символам: ");
+PrintArray(findArray, " -> ");
 
 
